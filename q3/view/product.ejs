@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>User Info</title>
+         <link href="/css/style.css" rel="stylesheet"/> 
+
+    </head>
+    <body>
+        <div>
+           
+            <%products.forEach((p)=> { %>
+                <div id="divImg">
+                    <%= p.id%>    <%= p.name%>  $ <%= p.price%><br>                   
+                    <img src="<%= p.imagePath%>" >
+                    <p><%= p.description%> </p>
+                    <form action="/addToCart" method="post">
+                        <input type="hidden" name="id" value="<%= p.id%>">
+                        <input type="submit" id="addtoCart" value="Add To Cart">
+                    </form>
+               </div>             
+            <%});%>            
+        </div>
+        
+    </body>
+</html>

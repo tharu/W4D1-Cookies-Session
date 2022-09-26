@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>User Info</title>
+         <link href="/css/style.css" rel="stylesheet"/> 
+
+    </head>
+    <body>
+        <%products.forEach((p)=> { %>
+            <div id="divImg">
+                <%= p.id%>    <%= p.product.name%>  $ <%= p.product.price%><br>     Qty: <%= p.qty%><br>               
+                <img src="<%= p.product.imagePath%>" >
+                <p><%= p.product.description%> </p>                
+           </div>             
+        <%});%>       
+    </body>
+</html>
